@@ -59,3 +59,4 @@ The following known data gaps and anomalies are recorded verbatim from the resea
 * **Preservation of Anomalies for Audit**: Suburban temporal anomalies are retained verbatim for audit rather than silently mutated or masked.
 * **Read-Only Ingestion**: The database build runs only during deployment or when source files update. Runtime backend API modules must open `chennai.sqlite` in read-only mode (`?mode=ro`).
 * **Status Enforcement**: Every queried candidate from historical tables must carry the status `HISTORICAL_UNVERIFIED`.
+
