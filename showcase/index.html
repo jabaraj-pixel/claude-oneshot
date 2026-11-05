@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B3C5D" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><rect width='48' height='48' rx='12' fill='%230B3C5D'/><path d='M10 34c7-10 21-10 28 0' stroke='%23F59E0B' stroke-width='4' fill='none' stroke-linecap='round'/><text x='24' y='24' text-anchor='middle' fill='%23fff' font-family='sans-serif' font-weight='900' font-size='14'>149</text></svg>"
+    />
+    <title>நம் பயணம் · Nam Payanam — Interactive 3D Chennai Mobility AI Film</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <canvas id="gl"></canvas>
+      <canvas id="overlay"></canvas>
+      <div id="hotspots"></div>
+    </div>
+
+    <header id="topbar" class="ui">
+      <div class="brand">
+        <img id="brandMark" alt="Nam Payanam" />
+        <span>நம் பயணம் · Nam Payanam</span>
+        <em>Chennai Helpline · 149</em>
+      </div>
+      <div class="actions">
+        <button id="btnSound" class="chipbtn" title="Toggle voice & music">🔊 <span>Voice & Music</span></button>
+        <button id="btnPhonePin" class="chipbtn" title="Pin user's phone on screen">📱 <span>Pin Phone</span></button>
+        <button id="btnLiveCall" class="chipbtn accent" title="Open phone keypad and dial 149">📞 <span>Dial by Number</span></button>
+        <button id="btnExplore" class="chipbtn" title="Free 3D camera around Chennai">⟲ <span>Explore Chennai</span></button>
+        <button id="btnRecord" class="chipbtn rec" title="Record full film as video">● <span>Record video</span></button>
+      </div>
+    </header>
+
+    <footer id="bottombar" class="ui">
+      <button id="btnPlay" class="play" aria-label="Play / pause">❚❚</button>
+      <div id="chapters"></div>
+      <span id="time">0:00</span>
+    </footer>
+
+    <div id="hint" class="hidden">
+      Drag to orbit Chennai · scroll to zoom · click a landmark marker to jump · <b>Resume film</b> with ▶
+    </div>
+    <div id="recBadge" class="hidden"><i></i> REC <span id="recTime">0:00</span> — keep this tab visible</div>
+
+    <!-- Pure Phone-Number Dialer Drawer (No App UI — Dial 149 by Phone Number Only!) -->
+    <div id="liveModal" class="hidden">
+      <div class="live-phone">
+        <div class="live-notch"></div>
+        <button id="btnCloseLive" class="live-close" title="Close phone">✕</button>
+        <div class="live-head">
+          <img id="liveLogo" alt="Phone" />
+          <div>
+            <strong>Phone Keypad · SIM 1</strong>
+            <small id="liveStatus">Dial 149 to call Nam Payanam</small>
+          </div>
+        </div>
+
+        <div id="liveDialView" class="live-body">
+          <div class="dial-screen" id="liveDigits"></div>
+          <div class="dial-sub" id="liveDialHint">Type <b>149</b> on keypad &amp; press Call (no app needed)</div>
+          <div class="keypad">
+            <button data-d="1">1</button><button data-d="2">2</button><button data-d="3">3</button>
+            <button data-d="4">4</button><button data-d="5">5</button><button data-d="6">6</button>
+            <button data-d="7">7</button><button data-d="8">8</button><button data-d="9">9</button>
+            <button data-d="*">*</button><button data-d="0">0</button><button data-d="#">#</button>
+          </div>
+          <div class="dial-actions">
+            <button id="btnClearDigits" class="sec-btn">⌫</button>
+            <button id="btnPlaceCall" class="call-btn">📞 Call</button>
+          </div>
+        </div>
+
+        <div id="liveCallView" class="live-body hidden">
+          <div class="wave-box">
+            <div id="liveBadge" class="speaker-pill">🔔 Ringing (1 of 2)…</div>
+            <div style="font-size:32px;font-weight:900;margin:4px 0;">149</div>
+            <div id="liveTimer" style="font-size:12px;color:#93c5fd;margin-bottom:8px;">Connecting…</div>
+            <canvas id="liveWave" width="280" height="48"></canvas>
+          </div>
+          <div id="liveTranscript" class="live-transcript">
+            Dialing <b>149</b> over regular cellular voice line…
+          </div>
+          <div class="prompt-label">In-Call Phone Keypad (Optional DTMF):</div>
+          <div class="keypad" style="margin-bottom:8px;">
+            <button data-ivr="1" title="Repeat Bus 53 -> 578 route">1 · Repeat</button>
+            <button data-ivr="2" title="Hear Metro Green Line option">2 · Metro</button>
+            <button data-ivr="3" title="Live bus status policy">3 · Timing</button>
+          </div>
+          <button id="btnHangupLive" class="hang-btn">✕ End Call (Receive WhatsApp &amp; SMS)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start">
+      <div class="card">
+        <img id="startLogo" alt="Nam Payanam logo" />
+        <h1>நம் பயணம் · Nam Payanam</h1>
+        <p>
+          Interactive 3D Chennai Film: Standing outside <b>MGR Chennai Central</b> without Google Maps →
+          Dials <b>149</b> on regular phone keypad → Answered in <b>2 rings</b> by <b>Kural (குரல் AI)</b> in
+          casual Chennai Tamil → Route to <b>Sriperumbudur</b> → <b>WhatsApp Journey Card &amp; SMS</b> →
+          <b>Admin Call Record &amp; Summary</b>
+        </p>
+        <div class="row">
+          <button id="btnStart" class="primary">▶ Play 3D Film</button>
+          <button id="btnStartExplore" class="ghost">Explore Chennai 3D</button>
+        </div>
+        <small>No app required — works purely by dialing phone number 149</small>
+      </div>
+    </div>
+
+    <div id="fatal" class="hidden">
+      <div class="card">
+        <h2>3D view unavailable</h2>
+        <p></p>
+        <small>Open in Chrome or Edge with hardware acceleration enabled.</small>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
