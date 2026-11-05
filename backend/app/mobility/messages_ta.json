@@ -1,0 +1,12 @@
+{
+  "_comment": "Strings marked with reviewed: false need native speaker review before final demo",
+  "caveat_historical": "இது பழைய அட்டவணையில் இருந்து எடுக்கப்பட்டது, நேரங்கள் மாறியிருக்கலாம்.",
+  "fare_unknown": "இந்த வழித்தடத்திற்கான கட்டணம் உறுதிப்படுத்தப்படவில்லை.",
+  "fare_known": "தோராயமான கட்டணம் {amount} ரூபாய்.",
+  "advisory_none": "எங்கள் பதிவுகளில் போக்குவரத்து தடைகள் எதுவும் பதிவாகவில்லை.",
+  "advisory_alert": "{summary}.",
+  "no_route": "எங்கள் பதிவுகளில் நேரடி வழித்தடம் கிடைக்கவில்லை. தகவல் முழுமையற்றதாக இருக்கலாம்.",
+  "follow_up_next": "அடுத்த வழித்தடத்தைப் பற்றி தெரிந்து கொள்ள விரும்புகிறீர்களா?",
+  "direct_bus": "{origin} முதல் {destination} வரை நேரடி பேருந்து {route} உள்ளது. சுமார் {stops} நிறுத்தங்கள்.",
+  "transfer_journey": "{origin} முதல் {transfer_stop} வரை பேருந்து {route1} எடுத்து, அங்கிருந்து {destination} செல்ல பேருந்து {route2} மாறவும்."
+}

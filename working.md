@@ -44,3 +44,42 @@
   - [x] Handle missing DB gracefully: service starts, returns `UNKNOWN` (reason: data not loaded), reports in diagnostics
   - [x] Create tiny fixture database for tests
   - [x] Write and pass unit tests in `backend/tests/test_mobility_repository.py` (6 passed, full suite 16 passed)
+
+- [x] **Phase 4: Stop Resolver**
+  - [x] Created `backend/app/mobility/resolver.py` and `data/curated/stop_aliases.csv`
+  - [x] Normalization: trim, lowercase, Unicode NFKC, collapse spaces, preserve Tamil intact
+  - [x] Order of matching: curated aliases -> exact stop name -> partial stop name
+  - [x] Ambiguity handling: returns `NEEDS_CLARIFICATION` with spoken questions in English and Tamil
+  - [x] No geocoding fabrication or stop merging
+  - [x] Tested and passed in `backend/tests/test_stop_resolver.py` (7 tests passed)
+
+- [x] **Phase 5: Journey Engine**
+  - [x] Created `backend/app/mobility/engine.py`
+  - [x] Direct bus journeys: pattern matching where origin stop_sequence < destination stop_sequence
+  - [x] Stop counting and pattern joining to route numbers
+  - [x] Directed graph for transfer journeys (default 2 transfers, hard cap 3)
+  - [x] Ranking by fewest transfers, then fewest stops
+  - [x] Returns best option + up to 2 alternatives; `NO_ROUTE` when unserved
+  - [x] Tested and passed in `backend/tests/test_journey_engine.py` (5 tests passed)
+
+- [x] **Phase 6: Enrichment Modules**
+  - [x] Created `backend/app/mobility/enrich/distance.py`: Haversine straight-line lower bound + OpenRouteService road routing with SQLite coordinate cache and graceful fallback
+  - [x] Created `backend/app/mobility/enrich/fare.py`: Bus unknown (no stop-to-stage mapping), curated CMRL metro fare lookup, provenance tracking
+  - [x] Created `backend/app/mobility/enrich/advisory.py`: Traffic Police diversion notices, review status gate (draft/approved), expiry filter, keyword matching
+  - [x] Created CLI tool `backend/app/mobility/tools/ingest_advisory.py` for human review & approval
+  - [x] Tested and passed in `backend/tests/test_mobility_enrichment.py` (5 tests passed)
+
+- [x] **Phase 7: Speech Formatter**
+  - [x] Created `backend/app/mobility/speech.py`
+  - [x] Centralized message catalogues in `messages_en.json` and `messages_ta.json`
+  - [x] TTS-friendly rules: short sentences, spelled out route numbers, plain caveats, fare/advisory status, follow-up questions
+  - [x] Tested and passed in `backend/tests/test_mobility_speech.py` (3 tests passed)
+
+- [x] **Phase 8: API & Sessions**
+  - [x] Created `backend/app/mobility/session.py`: 10-minute in-memory dialogue session manager
+  - [x] Created `backend/app/mobility/router.py`:
+    - `POST /api/mobility/routes/search`
+    - `GET /api/mobility/stops/search`
+    - `GET /api/mobility/diagnostics`
+  - [x] Documented proposal for router inclusion in `docs/proposals/mobility-changes.md`
+  - [x] Tested and passed in `backend/tests/test_mobility_router.py` (3 tests passed)

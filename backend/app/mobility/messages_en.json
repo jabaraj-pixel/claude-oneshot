@@ -1,0 +1,11 @@
+{
+  "caveat_historical": "This information is from an older timetable and may have changed.",
+  "fare_unknown": "Fare is not confirmed for this route.",
+  "fare_known": "The estimated fare is {amount} rupees.",
+  "advisory_none": "There are no reported traffic advisories in our records.",
+  "advisory_alert": "{summary}.",
+  "no_route": "We could not find a confirmed route in our transit records. Data may be incomplete.",
+  "follow_up_next": "Would you like to hear the next route option?",
+  "direct_bus": "Take bus {route} directly from {origin} to {destination}. It is about {stops} stops.",
+  "transfer_journey": "Take bus {route1} from {origin} to {transfer_stop}, then switch to bus {route2} towards {destination}."
+}

@@ -54,6 +54,16 @@ class TransitRepository(ABC):
         pass
 
     @abstractmethod
+    def get_patterns_serving_stop(self, stop_id: str, limit: int = 30) -> List[Dict[str, Any]]:
+        """Get patterns passing through a stop."""
+        pass
+
+    @abstractmethod
+    def get_pattern_stops(self, pattern_id: str) -> List[Dict[str, Any]]:
+        """Get all stops on a pattern in sequence."""
+        pass
+
+    @abstractmethod
     def get_trips_for_route(self, route_id: str, limit: int = 10) -> List[Dict[str, Any]]:
         """Fetch trips for a route."""
         pass
@@ -263,6 +273,50 @@ class SQLiteTransitRepository(TransitRepository):
                     results.append(dict(row))
         except Exception as e:
             logger.error("Error finding patterns for %s -> %s: %s", origin_stop_id, dest_stop_id, e)
+        return results
+
+    def get_patterns_serving_stop(self, stop_id: str, limit: int = 30) -> List[Dict[str, Any]]:
+        """Fetch patterns that serve a given stop."""
+        if not self._available:
+            return []
+        query_sql = """
+            SELECT rs.pattern_id, rs.route_id, br.route_number, rs.stop_sequence, rs.source_id, rs.status
+            FROM route_stops rs
+            LEFT JOIN bus_routes br ON rs.route_id = br.route_id
+            WHERE rs.stop_id = ?
+            ORDER BY rs.pattern_id
+            LIMIT ?
+        """
+        results = []
+        try:
+            with self._get_connection() as conn:
+                cur = conn.cursor()
+                cur.execute(query_sql, (stop_id, limit))
+                for row in cur.fetchall():
+                    results.append(dict(row))
+        except Exception as e:
+            logger.error("Error getting patterns serving stop %s: %s", stop_id, e)
+        return results
+
+    def get_pattern_stops(self, pattern_id: str) -> List[Dict[str, Any]]:
+        """Fetch all ordered stops for a specific pattern."""
+        if not self._available:
+            return []
+        query_sql = """
+            SELECT pattern_id, stop_sequence, stop_id, source_id, status
+            FROM route_stops
+            WHERE pattern_id = ?
+            ORDER BY CAST(stop_sequence AS INTEGER) ASC
+        """
+        results = []
+        try:
+            with self._get_connection() as conn:
+                cur = conn.cursor()
+                cur.execute(query_sql, (pattern_id,))
+                for row in cur.fetchall():
+                    results.append(dict(row))
+        except Exception as e:
+            logger.error("Error getting pattern stops for %s: %s", pattern_id, e)
         return results
 
     def get_trips_for_route(self, route_id: str, limit: int = 10) -> List[Dict[str, Any]]:

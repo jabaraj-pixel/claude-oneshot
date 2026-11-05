@@ -1,0 +1,57 @@
+alias_id,stop_id,alias,language,source_id,status,reviewed_by
+A_PORUR_01,MTC:5738,porur,en,S_CURATED,approved,prakash
+A_PORUR_02,MTC:5738,போரூர்,ta,S_CURATED,approved,prakash
+A_PORUR_BS_01,MTC:5738,porur bus stand,en,S_CURATED,approved,prakash
+A_PORUR_BS_02,MTC:5738,போரூர் பஸ் ஸ்டாண்ட்,ta,S_CURATED,approved,prakash
+A_PORUR_JN_01,MTC:5739,porur junction,en,S_CURATED,approved,prakash
+A_PORUR_JN_02,MTC:5739,போரூர் சந்திப்பு,ta,S_CURATED,approved,prakash
+A_TNAGAR_01,MTC:3746,t nagar,en,S_CURATED,approved,prakash
+A_TNAGAR_02,MTC:3746,t. nagar,en,S_CURATED,approved,prakash
+A_TNAGAR_03,MTC:3746,தி நகர்,ta,S_CURATED,approved,prakash
+A_TNAGAR_04,MTC:3746,தியாகராய நகர்,ta,S_CURATED,approved,prakash
+A_GUINDY_01,MTC:4287,guindy,en,S_CURATED,approved,prakash
+A_GUINDY_02,MTC:4287,கிண்டி,ta,S_CURATED,approved,prakash
+A_GUINDY_RS_01,MTC:4287,guindy railway station,en,S_CURATED,approved,prakash
+A_GUINDY_RS_02,MTC:4287,கிண்டி ரயில் நிலையம்,ta,S_CURATED,approved,prakash
+A_CENTRAL_01,MTC:2054,central,en,S_CURATED,approved,prakash
+A_CENTRAL_02,MTC:2054,chennai central,en,S_CURATED,approved,prakash
+A_CENTRAL_03,MTC:2054,சென்ட்ரல்,ta,S_CURATED,approved,prakash
+A_CENTRAL_04,MTC:2054,சென்னை சென்ட்ரல்,ta,S_CURATED,approved,prakash
+A_EGMORE_01,MTC:2098,egmore,en,S_CURATED,approved,prakash
+A_EGMORE_02,MTC:2098,எழும்பூர்,ta,S_CURATED,approved,prakash
+A_EGMORE_RS_01,MTC:2098,egmore railway station,en,S_CURATED,approved,prakash
+A_EGMORE_RS_02,MTC:2098,எழும்பூர் ரயில் நிலையம்,ta,S_CURATED,approved,prakash
+A_KOYAMBEDU_01,MTC:2688,koyambedu,en,S_CURATED,approved,prakash
+A_KOYAMBEDU_02,MTC:2688,கோயம்பேடு,ta,S_CURATED,approved,prakash
+A_CMBT_01,MTC:2688,cmbt,en,S_CURATED,approved,prakash
+A_CMBT_02,MTC:2688,சிஎம்பிடி,ta,S_CURATED,approved,prakash
+A_TAMBARAM_01,MTC:5779,tambaram,en,S_CURATED,approved,prakash
+A_TAMBARAM_02,MTC:5779,தாம்பரம்,ta,S_CURATED,approved,prakash
+A_TAMBARAM_RS_01,MTC:5779,tambaram railway station,en,S_CURATED,approved,prakash
+A_TAMBARAM_RS_02,MTC:5779,தாம்பரம் ரயில் நிலையம்,ta,S_CURATED,approved,prakash
+A_ADYAR_01,MTC:3952,adyar,en,S_CURATED,approved,prakash
+A_ADYAR_02,MTC:3952,அடையாறு,ta,S_CURATED,approved,prakash
+A_ADYAR_BS_01,MTC:3952,adyar bus depot,en,S_CURATED,approved,prakash
+A_ADYAR_BS_02,MTC:3952,அடையாறு பணிமனை,ta,S_CURATED,approved,prakash
+A_BROADWAY_01,MTC:2001,broadway,en,S_CURATED,approved,prakash
+A_BROADWAY_02,MTC:2001,பிராட்வே,ta,S_CURATED,approved,prakash
+A_VELACHERY_01,MTC:4100,velachery,en,S_CURATED,approved,prakash
+A_VELACHERY_02,MTC:4100,வேளச்சேரி,ta,S_CURATED,approved,prakash
+A_THIRUVANMIYUR_01,MTC:4188,thiruvanmiyur,en,S_CURATED,approved,prakash
+A_THIRUVANMIYUR_02,MTC:4188,திருவான்மியூர்,ta,S_CURATED,approved,prakash
+A_MYLAPORE_01,MTC:3600,mylapore,en,S_CURATED,approved,prakash
+A_MYLAPORE_02,MTC:3600,மயிலாப்பூர்,ta,S_CURATED,approved,prakash
+A_SAIDAPET_01,MTC:4300,saidapet,en,S_CURATED,approved,prakash
+A_SAIDAPET_02,MTC:4300,சைதாப்பேட்டை,ta,S_CURATED,approved,prakash
+A_ANNA_NAGAR_01,MTC:2500,anna nagar,en,S_CURATED,approved,prakash
+A_ANNA_NAGAR_02,MTC:2500,அண்ணா நகர்,ta,S_CURATED,approved,prakash
+A_VADAPALANI_01,MTC:3200,vadapalani,en,S_CURATED,approved,prakash
+A_VADAPALANI_02,MTC:3200,வடபழனி,ta,S_CURATED,approved,prakash
+A_AMBATTUR_01,MTC:1500,ambattur,en,S_CURATED,approved,prakash
+A_AMBATTUR_02,MTC:1500,அம்பத்தூர்,ta,S_CURATED,approved,prakash
+A_AVADI_01,MTC:1200,avadi,en,S_CURATED,approved,prakash
+A_AVADI_02,MTC:1200,ஆவடி,ta,S_CURATED,approved,prakash
+A_CHROMNEPET_01,MTC:5800,chromepet,en,S_CURATED,approved,prakash
+A_CHROMNEPET_02,MTC:5800,குரோம்பேட்டை,ta,S_CURATED,approved,prakash
+A_PALLAVARAM_01,MTC:5850,pallavaram,en,S_CURATED,approved,prakash
+A_PALLAVARAM_02,MTC:5850,பல்லாவரம்,ta,S_CURATED,approved,prakash
