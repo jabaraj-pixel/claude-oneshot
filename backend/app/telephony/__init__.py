@@ -26,6 +26,13 @@ class TelephonyConnectionManager:
         if call_id in self.active_connections:
             await self.active_connections[call_id].send_bytes(data)
 
+    async def send_json(self, call_id: str, payload: dict):
+        if call_id in self.active_connections:
+            await self.active_connections[call_id].send_json(payload)
+
+    def is_connected(self, call_id: str) -> bool:
+        return call_id in self.active_connections
+
 
 telephony_manager = TelephonyConnectionManager()
 
