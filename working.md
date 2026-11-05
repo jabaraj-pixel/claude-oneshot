@@ -14,6 +14,8 @@
    - Our mobility engine produces text responses for downstream teammates:
      - Spoken voice scripts for TTS (Colleague 1).
      - Post-call messaging summary (Colleague 2) for WhatsApp/SMS: must include key structured journey details (recommended routes, estimated fare/cost, walking distance/time, estimated arrival time/duration).
+5. **Feature Overlap & Conflict Escalation**:
+   - Hereafter, if any new requirement, schema, or information arrives that overlaps, conflicts with, or replaces an existing feature or implementation, DO NOT assume or overwrite silently. Always halt, explain the overlap, and ask the user explicitly which version/behavior to use.
 
 ---
 
