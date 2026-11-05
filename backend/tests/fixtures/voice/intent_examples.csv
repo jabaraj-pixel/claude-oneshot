@@ -1,0 +1,34 @@
+example_id,language,utterance,intent,origin_text,destination_text,transport_mode,entities_json,source_id,status
+E01_ta,ta,எனக்கு போரூரிலிருந்து கிண்டிக்கு போகணும். எந்த பஸ்?,JOURNEY_SEARCH,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E01_en,en,How do I get from Porur to Guindy by bus?,JOURNEY_SEARCH,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E01_tanglish,tanglish,Porur lendhu Guindy poganum. Enna bus edukkanum?,JOURNEY_SEARCH,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E02_ta,ta,தாம்பரத்திலிருந்து தி நகருக்கு பஸ் கட்டணம் எவ்வளவு?,FARE_QUERY,Tambaram,T Nagar,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E02_en,en,How much is the bus fare from Tambaram to T Nagar?,FARE_QUERY,Tambaram,T Nagar,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E02_tanglish,tanglish,Tambaram lendhu T Nagar bus fare evlo?,FARE_QUERY,Tambaram,T Nagar,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E03_ta,ta,போரூரிலிருந்து கிண்டிக்கு முதல் பஸ் எப்போது?,BUS_TIMING,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E03_en,en,When is the first bus from Porur to Guindy?,BUS_TIMING,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E03_tanglish,tanglish,Porur lendhu Guindy first bus eppo?,BUS_TIMING,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E04_ta,ta,தாம்பரத்தில் அடுத்த பஸ் எப்போது வரும்?,BUS_ARRIVAL,Tambaram,,bus,"{""time_reference"": ""next"", ""requires_live_data"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E04_en,en,When will the next bus arrive at Tambaram?,BUS_ARRIVAL,Tambaram,,bus,"{""time_reference"": ""next"", ""requires_live_data"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E04_tanglish,tanglish,Tambaram la next bus eppo varum?,BUS_ARRIVAL,Tambaram,,bus,"{""time_reference"": ""next"", ""requires_live_data"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E05_ta,ta,போரூரிலிருந்து கிண்டிக்கு வேறு வழி இருக்கா?,ALTERNATE_ROUTE,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E05_en,en,Is there another bus route from Porur to Guindy?,ALTERNATE_ROUTE,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E05_tanglish,tanglish,Porur lendhu Guindy ku vera route irukka?,ALTERNATE_ROUTE,Porur,Guindy,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E06_ta,ta,இந்த மருத்துவமனைக்கு அருகில் உள்ள பஸ் நிறுத்தம் எது?,NEAREST_STOP,,,bus,"{""landmark_type"": ""hospital"", ""location_required"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E06_en,en,What is the nearest bus stop to this hospital?,NEAREST_STOP,,,bus,"{""landmark_type"": ""hospital"", ""location_required"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E06_tanglish,tanglish,Indha hospital kitta nearest bus stop edhu?,NEAREST_STOP,,,bus,"{""landmark_type"": ""hospital"", ""location_required"": true}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E07_ta,ta,போரூரிலிருந்து வடபழனிக்கு மெட்ரோ இருக்கா?,METRO_QUERY,Porur,Vadapalani,metro,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E07_en,en,Is there a metro from Porur to Vadapalani?,METRO_QUERY,Porur,Vadapalani,metro,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E07_tanglish,tanglish,Porur lendhu Vadapalani metro irukka?,METRO_QUERY,Porur,Vadapalani,metro,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E08_ta,ta,தாம்பரத்திலிருந்து சென்னை கடற்கரைக்கு ரயில் எப்போது?,TRAIN_QUERY,Tambaram,Chennai Beach,suburban,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E08_en,en,When is the train from Tambaram to Chennai Beach?,TRAIN_QUERY,Tambaram,Chennai Beach,suburban,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E08_tanglish,tanglish,Tambaram lendhu Beach train eppo?,TRAIN_QUERY,Tambaram,Chennai Beach,suburban,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E09_ta,ta,கிண்டி நிலையத்தில் சக்கர நாற்காலி வசதி உள்ளதா?,ACCESSIBILITY_QUERY,,Guindy,any,"{""accessibility_need"": ""wheelchair""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E09_en,en,Is Guindy station wheelchair accessible?,ACCESSIBILITY_QUERY,,Guindy,any,"{""accessibility_need"": ""wheelchair""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E09_tanglish,tanglish,Guindy station la wheelchair facility irukka?,ACCESSIBILITY_QUERY,,Guindy,any,"{""accessibility_need"": ""wheelchair""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E10_ta,ta,பஸ் சேவை பற்றி புகார் கொடுக்க வேண்டும்.,COMPLAINT,,,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E10_en,en,I want to complain about a bus service.,COMPLAINT,,,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E10_tanglish,tanglish,Bus service pathi complaint kudukkanum.,COMPLAINT,,,bus,{},S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E11_ta,ta,பஸ்ஸில் என் பையை தொலைத்துவிட்டேன்.,LOST_PROPERTY,,,bus,"{""item"": ""bag""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E11_en,en,I lost my bag on a bus.,LOST_PROPERTY,,,bus,"{""item"": ""bag""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
+E11_tanglish,tanglish,Bus la en bag tholanjiduchu.,LOST_PROPERTY,,,bus,"{""item"": ""bag""}",S_EXAMPLES,AUTHORED_EVALUATION_NOT_TRANSPORT_FACT
