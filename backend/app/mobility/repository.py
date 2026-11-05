@@ -405,3 +405,4 @@ class SQLiteTransitRepository(TransitRepository):
             data_status="HISTORICAL_UNVERIFIED",
             diagnostics=diagnostics,
         )
+

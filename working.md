@@ -10,6 +10,10 @@
    - Every model must carry `source_id`, `data_status`, and (where relevant) `retrieved_on`.
    - Never mark historical feeds as real-time or verified passenger advice. Status must default to `HISTORICAL_UNVERIFIED`.
    - If database is missing, the service must start safely, return `UNKNOWN` (reason: data not loaded) for journeys, and report status in diagnostics.
+4. **Text Output Contract**:
+   - Our mobility engine produces text responses for downstream teammates:
+     - Spoken voice scripts for TTS (Colleague 1).
+     - Post-call messaging summary (Colleague 2) for WhatsApp/SMS: must include key structured journey details (recommended routes, estimated fare/cost, walking distance/time, estimated arrival time/duration).
 
 ---
 

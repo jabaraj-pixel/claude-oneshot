@@ -91,3 +91,4 @@ class JourneyResponse(TransitBaseModel):
         description="Public transit disclaimer"
     )
     diagnostics: Dict[str, Any] = Field(default_factory=dict, description="Metadata and repository diagnostics")
+

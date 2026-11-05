@@ -216,3 +216,4 @@ def test_missing_database_graceful_handling():
     assert resp.status == "UNKNOWN"
     assert resp.reason == "data not loaded"
     assert resp.diagnostics["database_available"] is False
+
