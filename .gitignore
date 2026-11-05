@@ -62,3 +62,13 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Audio & Voice Models (Large files)
+*.wav
+*.mp3
+*.nemo
+Voice_model/
+data/voice_samples/
+data/*.wav
+data/*.mp3
+
+
