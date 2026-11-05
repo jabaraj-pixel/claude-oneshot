@@ -1,0 +1,25 @@
+[
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "route_id": "MTC_29C",
+    "route_number": "29C",
+    "agency": "MTC Chennai",
+    "origin": "Tambaram Sanatorium",
+    "destination": "Perambur",
+    "via": ["Guindy", "T. Nagar", "Valluvar Kottam"],
+    "mode": "bus",
+    "typical_frequency_minutes": 15
+  },
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "route_id": "CMRL_BLUE",
+    "route_number": "Blue Line",
+    "agency": "CMRL",
+    "origin": "Wimco Nagar Depot",
+    "destination": "Chennai Airport",
+    "via": ["Central", "AG-DMS", "Guindy"],
+    "mode": "metro",
+    "typical_frequency_minutes": 6
+  }
+]
+

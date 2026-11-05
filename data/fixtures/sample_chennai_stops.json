@@ -1,0 +1,39 @@
+[
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "stop_id": "ST_TAMBARAM",
+    "stop_name": "Tambaram",
+    "stop_name_tamil": "தாம்பரம்",
+    "latitude": 12.9249,
+    "longitude": 80.1000,
+    "modes": ["bus", "suburban_train"]
+  },
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "stop_id": "ST_TNAGAR",
+    "stop_name": "T. Nagar Bus Terminus",
+    "stop_name_tamil": "தி.நகர் பேருந்து நிலையம்",
+    "latitude": 13.0418,
+    "longitude": 80.2341,
+    "modes": ["bus"]
+  },
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "stop_id": "ST_GUINDY",
+    "stop_name": "Guindy",
+    "stop_name_tamil": "கிண்டி",
+    "latitude": 13.0067,
+    "longitude": 80.2025,
+    "modes": ["bus", "metro", "suburban_train"]
+  },
+  {
+    "_comment": "SAMPLE FIXTURE ONLY - NOT FOR OFFICIAL DISPATCH",
+    "stop_id": "ST_CENTRAL",
+    "stop_name": "Chennai Central (Puratchi Thalaivar Dr. M.G. Ramachandran Central)",
+    "stop_name_tamil": "சென்னை சென்ட்ரல்",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "modes": ["bus", "metro", "suburban_train"]
+  }
+]
+
